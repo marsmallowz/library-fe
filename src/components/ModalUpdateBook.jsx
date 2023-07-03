@@ -171,7 +171,6 @@ export default function ModalUpdateBook({
               className="mt-3 rounded-md p-4 w-5/6 bg-gray-400 hover:bg-gray-500 cursor-pointer border-2 border-black shadow-[4px_4px] disabled:cursor-not-allowed">
               <div className="font-bold">Update</div>
             </button>
-            <div className="text-red-500 font-bold ">error bad request</div>
           </div>
         </div>
       </div>
