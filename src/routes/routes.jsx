@@ -10,12 +10,7 @@ import LoginUser from '../pages/LoginUser';
 import NotFound from '../pages/NotFound';
 import Register from '../pages/Register';
 import PageProtected from './protected';
-import Home from '../pages/Home.jsx';
-import LoginUser from '../pages/LoginUser.jsx';
-import Register from '../pages/Register.jsx';
 import BookDetail from '../pages/BookDetail.jsx';
-import NotFound from '../pages/NotFound.jsx';
-import LoginAdmin from '../pages/LoginAdmin.jsx';
 
 const routes = [
   {
@@ -25,20 +20,20 @@ const routes = [
   {
     path: '/login',
     element: (
-      < PageProtected guestOnly={true}>
+      <PageProtected guestOnly={true}>
         <LoginUser />
-      </ PageProtected>
+      </PageProtected>
     )
   },
   {
     path: '/register',
     element: (
-      < PageProtected guestOnly={true}>
+      <PageProtected guestOnly={true}>
         <Register />
-      </ PageProtected>
+      </PageProtected>
     )
   },
-  
+
   {
     path: '/book',
     element: <BookDetail />
@@ -50,44 +45,43 @@ const routes = [
   {
     path: '/admin/login',
     element: (
-      < PageProtected guestOnly={true}>
+      <PageProtected guestOnly={true}>
         <LoginAdmin />
-      </ PageProtected>
+      </PageProtected>
     )
   },
   {
     path: '/admin/dashboard',
     element: (
-      < PageProtected needLogin={true} adminOnly={true}>
-        <DashboardAdmin />
-      </ PageProtected>
+      //  <PageProtected needLogin={true} adminOnly={true}>
+      <DashboardAdmin />
+      //  </PageProtected>
     )
   },
   {
     path: '/admin/dashboard/books',
     element: (
-      <PageProtected needLogin={true} adminOnly={true}>
-        <BooksAdmin />
-      </PageProtected>
+      //  <PageProtected needLogin={true} adminOnly={true}>
+      <BooksAdmin />
+      //  </PageProtected>
     )
   },
   {
     path: '/admin/dashboard/categories',
     element: (
-      <PageProtected needLogin={true} adminOnly={true}>
-        <CategoriesAdmin />
-      </PageProtected>
+      // <PageProtected needLogin={true} adminOnly={true}>
+      <CategoriesAdmin />
+      // </PageProtected>
     )
   },
   {
     path: '/admin/dashboard/loans',
     element: (
-      <PageProtected needLogin={true} adminOnly={true}>
-        <LoansAdmin />
-      </PageProtected>
+      // <PageProtected needLogin={true} adminOnly={true}>
+      <LoansAdmin />
+      // </PageProtected>
     )
   }
 ];
-
 
 export default routes;
